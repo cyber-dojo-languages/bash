@@ -1,4 +1,4 @@
-FROM  alpine:3.5
+FROM  cyberdojofoundation/alpine-language_base:3.4
 LABEL maintainer=jon@jaggersoft.com
 
 RUN apk update
