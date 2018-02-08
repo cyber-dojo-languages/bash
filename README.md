@@ -1,3 +1,3 @@
-# bash 4.4.12
+# bash 4.4.19
 
-![Build Status](https://travis-ci.org/cyber-dojo-languages/bash-4.4.12.svg?branch=master)
+![Build Status](https://travis-ci.org/cyber-dojo-languages/bash-4.4.19.svg?branch=master)
