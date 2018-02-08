@@ -6,3 +6,4 @@ script:
     - curl -O https://raw.githubusercontent.com/cyber-dojo-languages/image_builder/master/${SCRIPT}
     - chmod +x ./${SCRIPT}
     - ./${SCRIPT} ${PWD}
+    - ./check_version.sh
