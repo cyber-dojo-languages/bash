@@ -4,4 +4,5 @@ LABEL maintainer=jon@jaggersoft.com
 RUN apk update
 RUN apk add bash
 
-RUN bash --version | grep -q 4.4.19
+COPY version.txt /tmp
+RUN bash --version | grep -f /tmp/version.txt
