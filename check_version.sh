@@ -1,10 +1,10 @@
 #!/bin/bash
 set -e
 
-readonly EXPECTED=$(cat README.md | grep Version | cut -d'=' -f2 | cut -d']' -f1)
+readonly EXPECTED=$(grep -file README.md Version | cut -d'=' -f2 | cut -d']' -f1)
 readonly ACTUAL=$(docker run --rm -it cyberdojofoundation/bash sh -c 'bash --version')
 
-if echo ${ACTUAL} | grep -q ${EXPECTED}; then
+if echo "${ACTUAL}" | grep -q "${EXPECTED}"; then
   echo "VERSION CONFIRMED as ${EXPECTED}"
 else
   echo "VERSION EXPECTED: ${EXPECTED}"
