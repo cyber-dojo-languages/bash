@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-readonly EXPECTED=$(grep Version README.md | cut -d'=' -f2 | cut -d']' -f1)
+readonly MY_DIR="$( cd "$( dirname "${0}" )" && pwd )"
+readonly EXPECTED=$(cat ${MY_DIR}/README.md | grep Version | cut -d'=' -f2 | cut -d']' -f1)
 readonly ACTUAL=$(docker run --rm -it cyberdojofoundation/bash sh -c 'bash --version')
 
 if echo "${ACTUAL}" | grep -q "${EXPECTED}"; then
