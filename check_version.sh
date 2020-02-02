@@ -1,8 +1,15 @@
-#!/bin/bash
-set -e
+#!/bin/bash -Eeu
+
+trimmed()
+{
+  local -r s1=$1
+  local -r s2="${s1##*( )}" # trim leading ws
+  local -r s3="${s2%%*( )}" # trim trailing ws
+  printf "${s3}"
+}
 
 readonly MY_DIR="$( cd "$( dirname "${0}" )" && pwd )"
-readonly EXPECTED=$(cat ${MY_DIR}/README.md | grep Version | cut -d'=' -f2 | cut -d']' -f1)
+readonly EXPECTED=$(trimmed "$(cat ${MY_DIR}/version.txt)")
 readonly ACTUAL=$(docker run --rm -it cyberdojofoundation/bash sh -c 'bash --version')
 
 if echo "${ACTUAL}" | grep -q "${EXPECTED}"; then

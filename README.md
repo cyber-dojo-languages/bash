@@ -1,7 +1,7 @@
 
 [![CircleCI](https://circleci.com/gh/cyber-dojo-languages/bash.svg?style=svg)](https://circleci.com/gh/cyber-dojo-languages/bash)
 
-## image_name="cyberdojofoundation/bash"
+## image_name="cyberdojofoundation/bash" [Version](https://github.com/cyber-dojo-languages/bash/blob/master/version.txt)
 
 [Version=5.0.11](https://github.com/cyber-dojo-languages/bash/blob/master/check_version.sh)
 
