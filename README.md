@@ -1,4 +1,4 @@
-[![Github Action (main)](https://github.com/cyber-dojo-languages/bash/actions/workflows/main.yml/badge.svg)](https://github.com/cyber-dojo-languages/bash/actions)
+[![Github Action (master)](https://github.com/cyber-dojo-languages/bash/actions/workflows/main.yml/badge.svg)](https://github.com/cyber-dojo-languages/bash/actions)
 
 ## image_name="ghcr.io/cyber-dojo-languages/bash"
 
